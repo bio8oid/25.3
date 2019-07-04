@@ -17,10 +17,7 @@ app.get('/getNote', function (req, res) {
         })
 });
 
-
-
 app.post('/updateNote/:note', function (req, res) {
-    console.log(+ req.params.note);
 
     fs.writeFile('./test.json',
         stringifyFile + req.params.note,
